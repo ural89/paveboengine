@@ -1,4 +1,5 @@
 #include "Application.h"
+#include <stdio.h>
 namespace Pavebo
 {
 	Application::Application()
@@ -11,6 +12,7 @@ namespace Pavebo
 
 	void Application::Run()
 	{
+		
 	}
 	
 }
