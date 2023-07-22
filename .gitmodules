@@ -1,0 +1,3 @@
+[submodule "PaveboEngine/vendor/spdlog"]
+	path = PaveboEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
