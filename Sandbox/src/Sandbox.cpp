@@ -5,7 +5,7 @@ class Sandbox : public Pavebo::Application
 {
 	void Run() override
 	{
-		PaveboEngine::Log::GetClientLogger()->warn("app initialized!");
+		PAVEBO_INFO("APP running");
 		while (true)
 		{
 
