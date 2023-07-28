@@ -57,7 +57,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>PAVEBO_PLATFORM_WINDOWS;DLL_EXPORT; </PreprocessorDefinitions>
+      <PreprocessorDefinitions>PAVEBO_PLATFORM_WINDOWS;DLL_EXPORT; PV_BUILD_DLL;</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)PaveboEngine\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
@@ -72,7 +72,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>PAVEBO_PLATFORM_WINDOWS;DLL_EXPORT; </PreprocessorDefinitions>
+      <PreprocessorDefinitions>PAVEBO_PLATFORM_WINDOWS;DLL_EXPORT; PV_BUILD_DLL;</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)PaveboEngine\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
