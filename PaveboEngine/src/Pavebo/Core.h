@@ -1,6 +1,6 @@
 #pragma once
 #ifdef PAVEBO_PLATFORM_WINDOWS
-	#ifdef DLL_EXPORT
+	#ifdef PV_BUILD_DLL
 		#define PAVEBO_API __declspec(dllexport)
 	#else
 		#define PAVEBO_API __declspec(dllimport)

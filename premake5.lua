@@ -22,12 +22,12 @@ project "PaveboEngine"
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
-	include
+	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include"
 	}
 	
-	filter "sytem:windows"
+	filter "system:windows"
 		cppdialect "c++17"
 		staticruntime "On"
 		systemversion "10.0.19041.0"
@@ -69,24 +69,24 @@ project "Sandbox"
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
-	include
+	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include"
-		"PaveboEngine/PaveboEngine/src"
+		"PaveboEngine/vendor/spdlog/include",
+		"PaveboEngine/src"
 	}
 	links
 	{
 		"PaveboEngine"
 	}
-	filter "sytem:windows"
+	filter "system:windows"
 		cppdialect "c++17"
 		staticruntime "On"
 		systemversion "10.0.19041.0"
 
-		defines
-		{
-			"PAVEBO_PLATFORM_WINDOWS"
-		}
+	defines
+	{
+		"PAVEBO_PLATFORM_WINDOWS"
+	}
 	
 		
 
