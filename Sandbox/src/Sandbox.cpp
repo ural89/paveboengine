@@ -5,6 +5,7 @@ class Sandbox : public Pavebo::Application
 {
 	void Run() override
 	{
+		Application::Run();
 		PAVEBO_INFO("APP running");
 		while (true)
 		{

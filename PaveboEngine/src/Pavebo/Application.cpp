@@ -14,7 +14,7 @@ namespace Pavebo
 	void Application::Run()
 	{
 		WindowResizeEvent e(1200, 720);
-		PAVEBO_TRACE(e);
+		PAVEBO_WARN(e.ToString());
 	}
 	
 }
