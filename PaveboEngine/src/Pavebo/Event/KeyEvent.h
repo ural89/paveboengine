@@ -30,6 +30,8 @@ namespace Pavebo
 	class KeyReleased : public KeyEvent
 	{
 	public:
+		KeyReleased(int keycode) : KeyEvent(keycode){}
+
 
 	};
 }
