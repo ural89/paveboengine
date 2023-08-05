@@ -23,4 +23,14 @@ namespace Pavebo
 		EventCategoryMouse = BIT(3),
 		EventCategoryMouseButton = BIT(4)
 	};
+	//#define EVENT_CLASS_TYPE(type) virutal const char* GetName() {return #type;}
+	class PAVEBO_API Event
+	{
+	public:
+		virtual ~Event() = default;
+
+		virtual EventType GetEventType() const = 0;
+		virtual const char* GetName() const = 0;
+		virtual std::string ToString() const { return GetName(); }
+	};
 }

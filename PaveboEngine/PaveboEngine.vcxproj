@@ -148,10 +148,12 @@
     <ClInclude Include="src\Pavebo\Core.h" />
     <ClInclude Include="src\Pavebo\EntryPoint.h" />
     <ClInclude Include="src\Pavebo\Event\Event.h" />
+    <ClInclude Include="src\Pavebo\Event\KeyEvent.h" />
     <ClInclude Include="src\Pavebo\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp" />
+    <ClCompile Include="src\Pavebo\Event\KeyEvent.cpp" />
     <ClCompile Include="src\Pavebo\Log.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

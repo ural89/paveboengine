@@ -20,6 +20,7 @@
       <Filter>Pavebo</Filter>
     </ClInclude>
     <ClInclude Include="src\Pavebo\Event\Event.h" />
+    <ClInclude Include="src\Pavebo\Event\KeyEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp">
@@ -28,5 +29,6 @@
     <ClCompile Include="src\Pavebo\Log.cpp">
       <Filter>Pavebo</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pavebo\Event\KeyEvent.cpp" />
   </ItemGroup>
 </Project>
