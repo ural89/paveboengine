@@ -1,5 +1,6 @@
 #pragma once
 #include "Core.h"
+#include "Event/Event.h"
 namespace Pavebo
 {
 	class PAVEBO_API Application

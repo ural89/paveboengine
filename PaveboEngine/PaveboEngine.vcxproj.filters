@@ -4,6 +4,9 @@
     <Filter Include="Pavebo">
       <UniqueIdentifier>{626F99C9-4E11-C49F-37CC-D7F3230D4BF0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pavebo\Event">
+      <UniqueIdentifier>{33724143-1FD5-D0E7-C85A-099EB49C9C6A}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pavebo.h" />
@@ -16,11 +19,16 @@
     <ClInclude Include="src\Pavebo\EntryPoint.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pavebo\Event\Event.h">
+      <Filter>Pavebo\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pavebo\Event\KeyEvent.h">
+      <Filter>Pavebo\Event</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pavebo\Log.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pavebo\Event\Event.h" />
-    <ClInclude Include="src\Pavebo\Event\KeyEvent.h" />
+    <ClInclude Include="src\Pavebo\Event\ApplicatoinEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp">
@@ -29,6 +37,5 @@
     <ClCompile Include="src\Pavebo\Log.cpp">
       <Filter>Pavebo</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pavebo\Event\KeyEvent.cpp" />
   </ItemGroup>
 </Project>
