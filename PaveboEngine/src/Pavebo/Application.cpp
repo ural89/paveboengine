@@ -17,7 +17,10 @@ namespace Pavebo
 		WindowResizeEvent e(1200, 720);
 		class KeyPressed kp(14);
 
-		PAVEBO_TRACE(e.ToString());
+		if (e.IsInCategory(EventCategoryApplication))
+		{
+			PAVEBO_TRACE(e.ToString());
+		}
 		PAVEBO_WARN(kp.ToString());
 	}
 	
