@@ -14,8 +14,10 @@ namespace Pavebo
 
 	void Application::Run()
 	{
-		//WindowResizeEvent e(1200, 720);
+		WindowResizeEvent e(1200, 720);
 		class KeyPressed kp(14);
+
+		PAVEBO_TRACE(e.ToString());
 		PAVEBO_WARN(kp.ToString());
 	}
 	
