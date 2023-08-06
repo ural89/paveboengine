@@ -1,6 +1,7 @@
 #include "Application.h"
 #include "Pavebo/Log.h"
 #include "Event/ApplicatoinEvent.h"
+#include "Event/KeyEvent.h"
 namespace Pavebo
 {
 	Application::Application()
@@ -13,8 +14,9 @@ namespace Pavebo
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1200, 720);
-		PAVEBO_WARN(e.ToString());
+		//WindowResizeEvent e(1200, 720);
+		class KeyPressed kp(14);
+		PAVEBO_WARN(kp.ToString());
 	}
 	
 }

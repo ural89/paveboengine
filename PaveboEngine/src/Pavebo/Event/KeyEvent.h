@@ -9,6 +9,8 @@ namespace Pavebo
 	public:
 		int GetKeycode() const { return m_keycode; }
 		
+		EVENT_CLASS_CATEGORY(EventCategoryInput | EventCategoryKeyboard);
+		
 	protected:
 		KeyEvent(int keycode) : m_keycode(keycode) {}
 
@@ -21,7 +23,8 @@ namespace Pavebo
 	{
 	public:
 		KeyPressed(int keycode, bool isRepeat = false) : KeyEvent(keycode), m_isRepeat(isRepeat) {}
-		std::string ToString() const override { return "Key pressed"; }
+		std::string ToString() const override { return "Key pressed " + std::to_string(GetKeycode()); }
+		EVENT_CLASS_TYPE(KeyPressed);
 
 	private:
 		bool m_isRepeat;
@@ -31,6 +34,7 @@ namespace Pavebo
 	{
 	public:
 		KeyReleased(int keycode) : KeyEvent(keycode){}
+		EVENT_CLASS_TYPE(KeyReleased);
 
 
 	};

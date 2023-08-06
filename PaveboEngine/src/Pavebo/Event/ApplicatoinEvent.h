@@ -20,6 +20,7 @@ namespace Pavebo
 
 		
 		EVENT_CLASS_TYPE(WindowResize);
+		EVENT_CLASS_CATEGORY(EventCategoryApplication);
 
 	private:
 		unsigned int m_Height, m_Width;
