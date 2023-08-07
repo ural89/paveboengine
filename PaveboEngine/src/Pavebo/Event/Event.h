@@ -30,9 +30,10 @@ namespace Pavebo
 
 	class PAVEBO_API Event
 	{
+		friend class EventDispatcher;
 	public:
 		virtual ~Event() = default;
-
+		
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
@@ -51,7 +52,12 @@ namespace Pavebo
 			: m_Event(event)
 		{
 		}
-
+		std::function<void()> fn;
+		void InvokeFN()
+		{
+			if (fn != nullptr)
+				fn();
+		}
 		template<typename T, typename F>
 		bool Dispatch(const F& func)
 		{
