@@ -17,6 +17,9 @@ project "PaveboEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "pvpch.h"
+	pchsource "PaveboEngine/src/pvpch.cpp"
+
 	files 
 	{
 		"%{prj.name}/src/**.h",

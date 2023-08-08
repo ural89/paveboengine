@@ -19,6 +19,9 @@
     <ClInclude Include="src\Pavebo\EntryPoint.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pavebo\Event\ApplicatoinEvent.h">
+      <Filter>Pavebo\Event</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pavebo\Event\Event.h">
       <Filter>Pavebo\Event</Filter>
     </ClInclude>
@@ -28,7 +31,7 @@
     <ClInclude Include="src\Pavebo\Log.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pavebo\Event\ApplicatoinEvent.h" />
+    <ClInclude Include="src\pvpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp">
@@ -37,5 +40,6 @@
     <ClCompile Include="src\Pavebo\Log.cpp">
       <Filter>Pavebo</Filter>
     </ClCompile>
+    <ClCompile Include="src\pvpch.cpp" />
   </ItemGroup>
 </Project>

@@ -1,13 +1,13 @@
 #pragma once
+#include "pvpch.h"
 #include "../Core.h"
 
-#include <functional>
-#include <sstream>
+
 namespace Pavebo
 {
 	enum EventType
 	{
-		None = 0,
+		None = 0, 
 		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
 		AppTick, AppUpdate, AppRender,
 		KeyPressed, KeyReleased,
@@ -52,17 +52,18 @@ namespace Pavebo
 			: m_Event(event)
 		{
 		}
-		std::function<void()> fn;
+		/*std::function<void()> fn;
 		void InvokeFN()
 		{
 			if (fn != nullptr)
 				fn();
-		}
+		}*/
 		template<typename T, typename F>
 		bool Dispatch(const F& func)
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
+				
 				m_Event.Handled |= func(static_cast<T&>(m_Event));
 				return true;
 			}

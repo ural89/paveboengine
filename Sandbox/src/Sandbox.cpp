@@ -10,8 +10,8 @@ class Sandbox : public Pavebo::Application
 		PAVEBO_INFO("APP running");
 		class Pavebo::KeyPressed kp(21);
 		Pavebo::EventDispatcher dispatcher = Pavebo::EventDispatcher(kp);
-		dispatcher.fn = std::bind(&Sandbox::OnKeyPressed, this);
-		dispatcher.InvokeFN();
+		//dispatcher.fn = std::bind(&Sandbox::OnKeyPressed, this);
+		//dispatcher.InvokeFN();
 		//dispatcher.Dispatch<Pavebo::KeyPressed>(Sandbox::OnKeyPressed); //TODO: dispatch sample
 		PAVEBO_TRACE(kp.ToString());
 		while (true)

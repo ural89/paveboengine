@@ -1,6 +1,4 @@
 #pragma once
-#include <stdio.h>
-
 
 //#ifdef PAVEBO_PLATFORM_WINDOWS
 extern Pavebo::Application* Pavebo::CreateApplication(); //extern means definition is in another place
