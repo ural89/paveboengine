@@ -1,3 +1,6 @@
 [submodule "PaveboEngine/vendor/spdlog"]
 	path = PaveboEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "PaveboEngine/vendor/GLFW"]
+	path = PaveboEngine/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
