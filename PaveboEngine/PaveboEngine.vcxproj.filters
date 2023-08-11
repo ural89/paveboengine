@@ -32,6 +32,7 @@
       <Filter>Pavebo</Filter>
     </ClInclude>
     <ClInclude Include="src\pvpch.h" />
+    <ClInclude Include="src\Pavebo\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp">

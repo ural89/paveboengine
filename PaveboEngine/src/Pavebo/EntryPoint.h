@@ -5,7 +5,7 @@ extern Pavebo::Application* Pavebo::CreateApplication(); //extern means definiti
 
 int main(int argc, char** argv)
 {
-	PaveboEngine::Log::Init();
+	Pavebo::Log::Init();
 	PAVEBO_CORE_WARN("Logger initialized!!!");
 	auto app = Pavebo::CreateApplication();
 	app->Run();

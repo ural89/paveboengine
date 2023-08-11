@@ -10,7 +10,7 @@ workspace "PaveboEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
-IncludeDir["GLFW"] = "Hazel/vendor/GLFW/include"
+IncludeDir["GLFW"] = "PaveboEngine/vendor/GLFW/include"
 
 include "PaveboEngine/vendor/GLFW"
 

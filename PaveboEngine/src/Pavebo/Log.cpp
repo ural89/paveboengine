@@ -1,6 +1,6 @@
 #include "pvpch.h"
 #include "Log.h"
-namespace PaveboEngine
+namespace Pavebo
 {
 	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
 	std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
