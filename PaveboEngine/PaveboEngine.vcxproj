@@ -157,12 +157,14 @@
     <ClInclude Include="src\Pavebo\Event\Event.h" />
     <ClInclude Include="src\Pavebo\Event\KeyEvent.h" />
     <ClInclude Include="src\Pavebo\Log.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\pvpch.h" />
     <ClInclude Include="src\Pavebo\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp" />
     <ClCompile Include="src\Pavebo\Log.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pvpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

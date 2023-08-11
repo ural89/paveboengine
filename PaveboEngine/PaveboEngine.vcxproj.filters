@@ -33,6 +33,7 @@
     </ClInclude>
     <ClInclude Include="src\pvpch.h" />
     <ClInclude Include="src\Pavebo\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp">
@@ -42,5 +43,6 @@
       <Filter>Pavebo</Filter>
     </ClCompile>
     <ClCompile Include="src\pvpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <functional>
 
+#include "Pavebo/Log.h"
 #include <stdio.h>
 #include <iostream>
 #include<string>

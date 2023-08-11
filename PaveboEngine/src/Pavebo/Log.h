@@ -26,6 +26,7 @@ namespace Pavebo
 #define PAVEBO_CORE_INFO(...)   ::Pavebo::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define PAVEBO_CORE_TRACE(...)  ::Pavebo::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define PAVEBO_CORE_FATAL(...)  ::Pavebo::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define PAVEBO_CORE_ASSERT(...)	::Pavebo::Log::GetCoreLogger()->assert(__VA_ARGS__)
 
 #define PAVEBO_ERROR(...)	::Pavebo::Log::GetClientLogger()->error(__VA_ARGS__)
 #define PAVEBO_WARN(...)	::Pavebo::Log::GetClientLogger()->warn(__VA_ARGS__)
