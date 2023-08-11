@@ -19,6 +19,20 @@ namespace Pavebo
 	{
 
 	}
+	void WindowsWindow::OnUpdate()
+	{
+
+	}
+
+	void WindowsWindow::SetVSync(bool enabled)
+	{
+		
+	}
+
+	bool WindowsWindow::IsVSync() const
+	{
+		return false;
+	}
 
 	void WindowsWindow::Init(const WindowProps& props)
 	{
@@ -32,8 +46,8 @@ namespace Pavebo
 		{
 			int success = glfwInit();
 
-			if (success == 0)
-				PAVEBO_CORE_ERROR("Could not initialize GLFW!");
+			//if (success == 0)
+				//PAVEBO_CORE_ERROR("Could not initialize GLFW!");
 			s_GLFWInitialized = true;
 		}
 
@@ -42,6 +56,10 @@ namespace Pavebo
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 		
+	}
+
+	void WindowsWindow::Shutdown()
+	{
 	}
 
 

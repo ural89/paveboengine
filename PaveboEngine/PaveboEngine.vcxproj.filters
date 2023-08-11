@@ -7,6 +7,12 @@
     <Filter Include="Pavebo\Event">
       <UniqueIdentifier>{33724143-1FD5-D0E7-C85A-099EB49C9C6A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pavebo.h" />
@@ -31,9 +37,13 @@
     <ClInclude Include="src\Pavebo\Log.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pavebo\Window.h">
+      <Filter>Pavebo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\pvpch.h" />
-    <ClInclude Include="src\Pavebo\Window.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp">
@@ -42,7 +52,9 @@
     <ClCompile Include="src\Pavebo\Log.cpp">
       <Filter>Pavebo</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\pvpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
