@@ -7,7 +7,7 @@ int main(int argc, char** argv)
 {
 	Pavebo::Log::Init();
 	PAVEBO_CORE_WARN("Logger initialized!!!");
-	auto app = Pavebo::CreateApplication();
+	Pavebo::Application* app = Pavebo::CreateApplication();
 	app->Run();
 	delete app;
 }

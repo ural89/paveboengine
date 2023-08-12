@@ -22,14 +22,10 @@ namespace Pavebo
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1200, 720);
-		//class KeyPressed kp(14);
-
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			PAVEBO_TRACE(e.ToString());
+			m_Window->OnUpdate();
 		}
-		//PAVEBO_WARN(kp.ToString());
 	}
 	
 }
