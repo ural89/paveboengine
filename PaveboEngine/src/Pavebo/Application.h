@@ -1,6 +1,7 @@
 #pragma once
 #include "Core.h"
 #include "Event/Event.h"
+#include "Window.h"
 namespace Pavebo
 {
 	class PAVEBO_API Application
@@ -9,6 +10,9 @@ namespace Pavebo
 		Application();
 		virtual ~Application();
 		virtual void Run();
+	private:
+		std::unique_ptr<Window> m_Window;
+		
 
 	};
 	Application* CreateApplication();
