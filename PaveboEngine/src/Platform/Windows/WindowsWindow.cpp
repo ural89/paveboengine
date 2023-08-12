@@ -3,7 +3,7 @@
 
 namespace Pavebo
 {
-	static bool s_GLFWInitialized = false;
+	static bool s_GLFWInitialized = false; //it is static to initialize once
 
 	Window* Window::Create(const WindowProps& props)
 	{
@@ -17,21 +17,31 @@ namespace Pavebo
 
 	WindowsWindow::~WindowsWindow()
 	{
-
+		Shutdown();
 	}
 	void WindowsWindow::OnUpdate()
 	{
-
+		glfwPollEvents();
+		glfwSwapBuffers(m_Window);
 	}
 
 	void WindowsWindow::SetVSync(bool enabled)
 	{
-		
+		if (enabled)
+		{
+			glfwSwapInterval(1);
+		}
+		else
+		{
+			glfwSwapInterval(0);
+		}
+
+		m_Data.VSync = enabled;
 	}
 
 	bool WindowsWindow::IsVSync() const
 	{
-		return false;
+		return m_Data.VSync;
 	}
 
 	void WindowsWindow::Init(const WindowProps& props)
@@ -42,12 +52,12 @@ namespace Pavebo
 
 		PAVEBO_CORE_INFO("Creating window {0} ({1}, {2}", props.Title, props.Width, props.Height);
 
-		if (!s_GLFWInitialized)
+		if (!s_GLFWInitialized) //this is static to initialize once
 		{
 			int success = glfwInit();
 
-			//if (success == 0)
-				//PAVEBO_CORE_ERROR("Could not initialize GLFW!");
+			if (success == 0)
+				PAVEBO_CORE_ERROR("Could not initialize GLFW!");
 			s_GLFWInitialized = true;
 		}
 
@@ -60,6 +70,7 @@ namespace Pavebo
 
 	void WindowsWindow::Shutdown()
 	{
+		glfwDestroyWindow(m_Window);
 	}
 
 

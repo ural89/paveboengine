@@ -22,6 +22,12 @@ namespace Pavebo
 	};
 
 	//interface for api
+
+	/// <summary>
+	/// staticruntime "on"
+	/// runtime "Release"
+	/// add these lines to glfw premake file to compile!!!!
+	/// </summary>
 	class PAVEBO_API Window
 	{
 	public:
