@@ -16,7 +16,7 @@ namespace Pavebo
 		virtual std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "Mouse button pressed " << m_Button;
+			ss << "Mouse button pressed " << std::to_string(m_Button);
 			return ss.str();
 		}
 		EVENT_CLASS_TYPE(MouseButtonPressed)

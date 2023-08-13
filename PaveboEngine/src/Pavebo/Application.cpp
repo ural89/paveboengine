@@ -39,7 +39,7 @@ namespace Pavebo
 
 	void Application::OnEvent(Pavebo::Event& e)
 	{
-		PAVEBO_INFO(e.GetName());
+		PAVEBO_INFO(e.ToString());
 	}
 	
 }
