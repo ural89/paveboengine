@@ -2,6 +2,7 @@
 #include "WindowsWindow.h"
 #include "Pavebo/Event/ApplicatoinEvent.h"
 #include "Pavebo/Event/KeyEvent.h"
+#include "Pavebo/Event/MouseEvent.h"
 namespace Pavebo
 {
 	static bool s_GLFWInitialized = false; //it is static to initialize once
@@ -105,6 +106,28 @@ namespace Pavebo
 			case GLFW_REPEAT:
 				class KeyPressed keyEvent = class KeyPressed(key, true);
 				data.EventCallback(keyEvent);
+				break;
+			}
+			
+			});
+		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods) {
+
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			switch (action)
+			{
+			case GLFW_PRESS:
+			{
+				MouseButtonPressedEvent mouseEvent(button);
+				data.EventCallback(mouseEvent);
+				break;
+			}
+			case GLFW_RELEASE :
+			{
+				MouseButtonReleasedEvent mouseEvent(button);
+				data.EventCallback(mouseEvent);
+				break;
+			}
+			case GLFW_REPEAT:
 				break;
 			}
 			
