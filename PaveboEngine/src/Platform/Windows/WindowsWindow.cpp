@@ -87,7 +87,27 @@ namespace Pavebo
 
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods){
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
-			PAVEBO_CORE_INFO(key);
+
+			switch (action)
+			{
+			case GLFW_PRESS:
+			{
+				class KeyPressed keyEvent = class KeyPressed(key, false);
+				data.EventCallback(keyEvent);
+				break;
+			}
+			case GLFW_RELEASE:
+			{
+				class KeyReleased keyEvent = class KeyReleased(key);
+				data.EventCallback(keyEvent);
+				break;
+			}
+			case GLFW_REPEAT:
+				class KeyPressed keyEvent = class KeyPressed(key, true);
+				data.EventCallback(keyEvent);
+				break;
+			}
+			
 			});
 	}
 
