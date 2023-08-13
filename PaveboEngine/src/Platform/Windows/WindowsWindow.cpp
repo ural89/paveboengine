@@ -1,6 +1,7 @@
 #include "pvpch.h"
 #include "WindowsWindow.h"
-
+#include "Pavebo/Event/ApplicatoinEvent.h"
+#include "Pavebo/Event/KeyEvent.h"
 namespace Pavebo
 {
 	static bool s_GLFWInitialized = false; //it is static to initialize once
@@ -50,7 +51,7 @@ namespace Pavebo
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
 
-		PAVEBO_CORE_INFO("Creating window {0} ({1}, {2}", props.Title, props.Width, props.Height);
+		PAVEBO_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
 		if (!s_GLFWInitialized) //this is static to initialize once
 		{
@@ -66,9 +67,13 @@ namespace Pavebo
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 		
-		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int height, int width){
+		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height){
 			WindowData &data = *(WindowData*)glfwGetWindowUserPointer(window);
-			PAVEBO_CORE_INFO(data.Height);
+
+			WindowResizeEvent windowResizeEvent = WindowResizeEvent(width, height);
+			data.Width = windowResizeEvent.GetWidth();
+			data.Height = windowResizeEvent.GetHeight();			
+			data.EventCallback(windowResizeEvent);
 		});
 	}
 
