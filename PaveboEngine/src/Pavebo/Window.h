@@ -30,6 +30,7 @@ namespace Pavebo
 	/// </summary>
 	class PAVEBO_API Window
 	{
+
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
 		virtual ~Window() {}

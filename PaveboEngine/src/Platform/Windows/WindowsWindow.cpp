@@ -66,6 +66,10 @@ namespace Pavebo
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 		
+		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int height, int width){
+			WindowData &data = *(WindowData*)glfwGetWindowUserPointer(window);
+			PAVEBO_CORE_INFO(data.Height);
+		});
 	}
 
 	void WindowsWindow::Shutdown()
