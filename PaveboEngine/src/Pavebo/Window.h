@@ -13,7 +13,7 @@ namespace Pavebo
 		unsigned int Width;
 		unsigned int Height;
 
-		WindowProps(const std::string& title = "Pavebo Engine",
+		WindowProps(const std::string& title = "Pavebo Engine Game",
 			unsigned int width = 1280,
 			unsigned int height = 720) : Title(title), Width(width), Height(height)
 		{
