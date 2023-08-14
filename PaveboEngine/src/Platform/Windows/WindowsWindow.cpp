@@ -6,6 +6,12 @@
 namespace Pavebo
 {
 	static bool s_GLFWInitialized = false; //it is static to initialize once
+	void static OnError(int error_code, const char* description) //glfw uses C interface so does not support object class
+	{															//for that reason you have to create user pointer data
+																// you create a struct contains the method to call
+		PAVEBO_CORE_ERROR("GLFW Error {0}, {1}", error_code, description);
+
+	}
 
 	Window* Window::Create(const WindowProps& props)
 	{
@@ -61,6 +67,9 @@ namespace Pavebo
 			if (success == 0)
 				PAVEBO_CORE_ERROR("Could not initialize GLFW!");
 			s_GLFWInitialized = true;
+	
+			glfwSetErrorCallback(OnError);
+			
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
@@ -132,12 +141,21 @@ namespace Pavebo
 			}
 			
 			});
+		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xPos, double yPos)
+		{
+				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+				MouseMovedEvent mouseEvent(xPos, yPos);
+				data.EventCallback(mouseEvent);
+
+		});
 	}
 
 	void WindowsWindow::Shutdown()
 	{
 		glfwDestroyWindow(m_Window);
 	}
+
+	
 
 
 }

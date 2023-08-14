@@ -40,7 +40,7 @@ namespace Pavebo
 	class MouseMovedEvent : public MouseEvent
 	{
 	public:
-		MouseMovedEvent(int x, int y)  : m_X(x), m_Y(y)  {};
+		MouseMovedEvent(double x, double y)  : m_X(x), m_Y(y)  {};
 		virtual std::string ToString() const override
 		{
 			std::stringstream ss;
@@ -49,7 +49,7 @@ namespace Pavebo
 		}
 		EVENT_CLASS_TYPE(MouseMoved);
 	private:
-		int m_X;
-		int m_Y;
+		double m_X;
+		double m_Y;
 	};
 }
