@@ -40,10 +40,10 @@ namespace Pavebo
 	{
 		PAVEBO_INFO(e.ToString());
 		EventDispatcher ed = EventDispatcher(e);
-		ed.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnApplicationQuit));
+		ed.Dispatch(BIND_EVENT_FN(OnApplicationQuit), EventType::KeyPressed);
 	}
 
-	void Application::OnApplicationQuit(WindowCloseEvent& e)
+	void Application::OnApplicationQuit(Event& e)
 	{
 		PAVEBO_ERROR("Application quit");
 	}

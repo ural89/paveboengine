@@ -60,13 +60,13 @@ namespace Pavebo
 			if (fn != nullptr)
 				fn();
 		}*/
-		template<typename T, typename F>
-		bool Dispatch(const F& func)
+		
+		bool Dispatch(std::function<void(Event&)> func, EventType eventType)
 		{
-			if (m_Event.GetEventType() == T::GetStaticType())
+			if (m_Event.GetEventType() == eventType)
 			{
 				
-				m_Event.Handled |= func(static_cast<T&>(m_Event));
+				m_Event.Handled = true;
 				return true;
 			}
 			return false;

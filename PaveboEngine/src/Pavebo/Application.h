@@ -15,7 +15,7 @@ namespace Pavebo
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 		void OnEvent(Event &e);
-		void OnApplicationQuit(WindowCloseEvent& e);
+		void OnApplicationQuit(Event& e);
 	};
 	Application* CreateApplication();
 }
