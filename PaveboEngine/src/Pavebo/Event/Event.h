@@ -43,6 +43,8 @@ namespace Pavebo
 		{
 			return GetCategoryFlags() & category;
 		}
+	private:
+		bool Handled;
 	};
 
 	class EventDispatcher
@@ -71,6 +73,7 @@ namespace Pavebo
 		}
 	private:
 		Event& m_Event;
+
 	};
 
 }

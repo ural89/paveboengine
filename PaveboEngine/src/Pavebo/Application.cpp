@@ -2,7 +2,6 @@
 #include "Application.h"
 
 
-#include "Event/ApplicatoinEvent.h"
 #include "Platform/Windows/WindowsWindow.h"
 #include <GLFW/glfw3.h>
 namespace Pavebo
@@ -40,6 +39,13 @@ namespace Pavebo
 	void Application::OnEvent(Pavebo::Event& e)
 	{
 		PAVEBO_INFO(e.ToString());
+		EventDispatcher ed = EventDispatcher(e);
+		ed.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnApplicationQuit));
+	}
+
+	void Application::OnApplicationQuit(WindowCloseEvent& e)
+	{
+		PAVEBO_ERROR("Application quit");
 	}
 	
 }
