@@ -65,7 +65,7 @@ namespace Pavebo
 		{
 			if (m_Event.GetEventType() == eventType)
 			{
-				
+				func(m_Event);
 				m_Event.Handled = true;
 				return true;
 			}

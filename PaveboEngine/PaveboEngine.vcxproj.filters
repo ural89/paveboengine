@@ -34,6 +34,9 @@
     <ClInclude Include="src\Pavebo\Event\KeyEvent.h">
       <Filter>Pavebo\Event</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pavebo\Event\MouseEvent.h">
+      <Filter>Pavebo\Event</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pavebo\Log.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
@@ -44,7 +47,6 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\pvpch.h" />
-    <ClInclude Include="src\Pavebo\Event\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp">

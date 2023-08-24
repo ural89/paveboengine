@@ -28,6 +28,7 @@ namespace Pavebo
 
 	void Application::Run()
 	{
+		
 		while (m_Running)
 		{
 			glClearColor(1, 0, 1, 1);
@@ -38,9 +39,10 @@ namespace Pavebo
 
 	void Application::OnEvent(Pavebo::Event& e)
 	{
-		PAVEBO_INFO(e.ToString());
 		EventDispatcher ed = EventDispatcher(e);
-		ed.Dispatch(BIND_EVENT_FN(OnApplicationQuit), EventType::KeyPressed);
+		ed.Dispatch(BIND_EVENT_FN(OnApplicationQuit), EventType::WindowClose);
+		PAVEBO_INFO(e.ToString());
+		
 	}
 
 	void Application::OnApplicationQuit(Event& e)
