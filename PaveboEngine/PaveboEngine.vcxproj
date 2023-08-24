@@ -149,6 +149,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Pavebo\Layer.h" />
     <ClInclude Include="src\Pavebo.h" />
     <ClInclude Include="src\Pavebo\Application.h" />
     <ClInclude Include="src\Pavebo\Core.h" />
