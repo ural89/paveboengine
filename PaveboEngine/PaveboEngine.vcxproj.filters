@@ -48,6 +48,7 @@
     </ClInclude>
     <ClInclude Include="src\pvpch.h" />
     <ClInclude Include="src\Pavebo\Layer.h" />
+    <ClInclude Include="src\Pavebo\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp">
@@ -60,5 +61,7 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pvpch.cpp" />
+    <ClCompile Include="src\Pavebo\Layer.cpp" />
+    <ClCompile Include="src\Pavebo\LayerStack.cpp" />
   </ItemGroup>
 </Project>
