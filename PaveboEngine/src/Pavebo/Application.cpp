@@ -33,6 +33,8 @@ namespace Pavebo
 		{
 			glClearColor(1, 0, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+
 			m_Window->OnUpdate();
 		}
 	}
@@ -41,8 +43,35 @@ namespace Pavebo
 	{
 		EventDispatcher ed = EventDispatcher(e);
 		ed.Dispatch(BIND_EVENT_FN(OnApplicationQuit), EventType::WindowClose);
-		PAVEBO_INFO(e.ToString());
 		
+		PAVEBO_CORE_TRACE(e.ToString());
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
+		{
+			(*--it)->OnEvent(e);
+			if (e.IsHandled())
+			{
+				break;
+			}
+		}
+	}
+
+	void Application::OnUpdate()
+	{
+		for (auto layer : m_LayerStack)
+		{
+			layer->OnUpdate();
+		}
+	}
+
+	void Application::PushLayer(Layer* layer)
+	{
+
+		m_LayerStack.PushLayer(layer);
+	}
+
+	void Application::PushOverlay(Layer* overlay)
+	{
+		m_LayerStack.PushOverlay(overlay);
 	}
 
 	void Application::OnApplicationQuit(Event& e)

@@ -38,7 +38,7 @@ namespace Pavebo
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
 		virtual std::string ToString() const { return GetName(); }
-
+		bool IsHandled() const { return Handled; }
 		bool IsInCategory(EventCategory category)
 		{
 			return GetCategoryFlags() & category;
@@ -60,7 +60,7 @@ namespace Pavebo
 			if (fn != nullptr)
 				fn();
 		}*/
-		
+	
 		bool Dispatch(std::function<void(Event&)> func, EventType eventType)
 		{
 			if (m_Event.GetEventType() == eventType)

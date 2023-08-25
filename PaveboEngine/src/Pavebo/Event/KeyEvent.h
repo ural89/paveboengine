@@ -34,6 +34,7 @@ namespace Pavebo
 	{
 	public:
 		KeyReleased(int keycode) : KeyEvent(keycode){}
+		std::string ToString() const override { return "Key released " + std::to_string(GetKeycode()); }
 		EVENT_CLASS_TYPE(KeyReleased);
 
 
