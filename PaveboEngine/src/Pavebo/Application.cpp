@@ -45,7 +45,7 @@ namespace Pavebo
 		EventDispatcher ed = EventDispatcher(e);
 		ed.Dispatch(BIND_EVENT_FN(OnApplicationQuit), EventType::WindowClose);
 		
-		PAVEBO_CORE_TRACE(e.ToString());
+		//PAVEBO_CORE_TRACE(e.ToString());
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
 		{
 			(*--it)->OnEvent(e);
