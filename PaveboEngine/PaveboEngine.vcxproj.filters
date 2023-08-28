@@ -37,6 +37,12 @@
     <ClInclude Include="src\Pavebo\Event\MouseEvent.h">
       <Filter>Pavebo\Event</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pavebo\Layer.h">
+      <Filter>Pavebo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Pavebo\LayerStack.h">
+      <Filter>Pavebo</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pavebo\Log.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
@@ -47,11 +53,15 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\pvpch.h" />
-    <ClInclude Include="src\Pavebo\Layer.h" />
-    <ClInclude Include="src\Pavebo\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp">
+      <Filter>Pavebo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pavebo\Layer.cpp">
+      <Filter>Pavebo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pavebo\LayerStack.cpp">
       <Filter>Pavebo</Filter>
     </ClCompile>
     <ClCompile Include="src\Pavebo\Log.cpp">
@@ -61,7 +71,5 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pvpch.cpp" />
-    <ClCompile Include="src\Pavebo\Layer.cpp" />
-    <ClCompile Include="src\Pavebo\LayerStack.cpp" />
   </ItemGroup>
 </Project>
