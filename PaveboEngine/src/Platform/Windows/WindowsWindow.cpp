@@ -1,8 +1,11 @@
 #include "pvpch.h"
 #include "WindowsWindow.h"
+
 #include "Pavebo/Event/ApplicatoinEvent.h"
 #include "Pavebo/Event/KeyEvent.h"
 #include "Pavebo/Event/MouseEvent.h"
+
+
 namespace Pavebo
 {
 	static bool s_GLFWInitialized = false; //it is static to initialize once
@@ -74,6 +77,8 @@ namespace Pavebo
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		if (status == 0) PAVEBO_CORE_ERROR("Could not initialize GLAD");
 		glfwSetWindowUserPointer(m_Window, &m_Data); //m_data is custom data type. you will recieve this as a callback parameter
 		SetVSync(true);
 		

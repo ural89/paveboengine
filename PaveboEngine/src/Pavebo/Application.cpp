@@ -14,8 +14,6 @@ namespace Pavebo
 		winProps.Height = 720;
 		winProps.Title = "Game";*/
 		m_Window = std::unique_ptr<Window>(Window::Create());
-
-		
 		std::function<void(Pavebo::Event&) > eventCallback = BIND_EVENT_FN(OnEvent);
 		
 		m_Window->SetEventCallback(eventCallback);
