@@ -19,12 +19,13 @@ namespace Pavebo
 	void LayerStack::PushLayer(Layer* layer)
 	{
 		m_LayerInsert = m_Layers.emplace(m_LayerInsert, layer); //didnt insert at the beginning. Just added last just before overlay layers
-		
+		layer->OnAttach();
 	}
 
 	void LayerStack::PushOverlay(Layer* overlay) //overlays will be rendered last
 	{
 		m_Layers.emplace_back(overlay);
+		overlay->OnAttach();
 	}
 
 	void LayerStack::PopLayer(Layer* layer)
@@ -32,6 +33,7 @@ namespace Pavebo
 		auto it = std::find(m_Layers.begin(), m_Layers.end(), layer);
 		if (it != m_Layers.end())
 		{
+			(*it)->OnDetach();
 			m_Layers.erase(it); //popping will not delete layer. It will just remove from list
 			m_LayerInsert--;
 		}
@@ -40,6 +42,9 @@ namespace Pavebo
 	{
 		auto it = std::find(m_Layers.begin(), m_Layers.end(), overlay);
 		if (it != m_Layers.end())
+		{
+			(*it)->OnDetach();
 			m_Layers.erase(it);
+		}
 	}
 }

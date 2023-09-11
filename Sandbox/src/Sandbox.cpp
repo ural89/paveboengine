@@ -1,7 +1,7 @@
 #include <Pavebo.h>
 #include <stdio.h>
 #include "Pavebo/Event/KeyEvent.h"
-
+#include "Pavebo/Layer/DebugOverlayLayer.h"
 class ExampleLayer : public Pavebo::Layer
 {
 	void OnUpdate() override
@@ -19,7 +19,7 @@ class Sandbox : public Pavebo::Application
 public:
 	Sandbox()
 	{
-		PushLayer(new ExampleLayer());
+		PushLayer(new Pavebo::DebugOverlayLayer());
 	}
 	~Sandbox(){}
 	void Run() override
