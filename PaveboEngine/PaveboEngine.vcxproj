@@ -160,8 +160,8 @@
     <ClInclude Include="src\Pavebo\Event\Event.h" />
     <ClInclude Include="src\Pavebo\Event\KeyEvent.h" />
     <ClInclude Include="src\Pavebo\Event\MouseEvent.h" />
-    <ClInclude Include="src\Pavebo\Layer.h" />
-    <ClInclude Include="src\Pavebo\LayerStack.h" />
+    <ClInclude Include="src\Pavebo\Layer\Layer.h" />
+    <ClInclude Include="src\Pavebo\Layer\LayerStack.h" />
     <ClInclude Include="src\Pavebo\Log.h" />
     <ClInclude Include="src\Pavebo\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
@@ -169,8 +169,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp" />
-    <ClCompile Include="src\Pavebo\Layer.cpp" />
-    <ClCompile Include="src\Pavebo\LayerStack.cpp" />
+    <ClCompile Include="src\Pavebo\Layer\Layer.cpp" />
+    <ClCompile Include="src\Pavebo\Layer\LayerStack.cpp" />
     <ClCompile Include="src\Pavebo\Log.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pvpch.cpp">

@@ -1,6 +1,6 @@
 #pragma once
-#include "Core.h"
-#include "Event/Event.h"
+#include "../Core.h"
+#include "../Event/Event.h"
 #include <string>
 namespace Pavebo {
 

@@ -19,6 +19,7 @@ namespace Pavebo
 	void LayerStack::PushLayer(Layer* layer)
 	{
 		m_LayerInsert = m_Layers.emplace(m_LayerInsert, layer); //didnt insert at the beginning. Just added last just before overlay layers
+		
 	}
 
 	void LayerStack::PushOverlay(Layer* overlay) //overlays will be rendered last

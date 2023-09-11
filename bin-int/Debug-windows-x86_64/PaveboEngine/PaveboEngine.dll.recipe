@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\uralk\Documents\GitHub\paveboengine\bin\Debug-windows-x86_64\PaveboEngine\PaveboEngine.dll</FullPath>
+      <FullPath>C:\Dev\paveboengine\PaveboEngine\bin\Debug-windows-x86_64\PaveboEngine\PaveboEngine.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

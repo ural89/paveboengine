@@ -37,10 +37,10 @@
     <ClInclude Include="src\Pavebo\Event\MouseEvent.h">
       <Filter>Pavebo\Event</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pavebo\Layer.h">
+    <ClInclude Include="src\Pavebo\Layer\Layer.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pavebo\LayerStack.h">
+    <ClInclude Include="src\Pavebo\Layer\LayerStack.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
     <ClInclude Include="src\Pavebo\Log.h">
@@ -58,10 +58,10 @@
     <ClCompile Include="src\Pavebo\Application.cpp">
       <Filter>Pavebo</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pavebo\Layer.cpp">
+    <ClCompile Include="src\Pavebo\Layer\Layer.cpp">
       <Filter>Pavebo</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pavebo\LayerStack.cpp">
+    <ClCompile Include="src\Pavebo\Layer\LayerStack.cpp">
       <Filter>Pavebo</Filter>
     </ClCompile>
     <ClCompile Include="src\Pavebo\Log.cpp">

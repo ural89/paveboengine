@@ -6,7 +6,7 @@ class ExampleLayer : public Pavebo::Layer
 {
 	void OnUpdate() override
 	{
-		PAVEBO_INFO("Updating layer");
+		//PAVEBO_INFO("Updating layer");
 	}
 	void OnEvent(Pavebo::Event& event) override
 	{
