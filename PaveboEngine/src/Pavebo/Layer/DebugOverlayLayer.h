@@ -2,13 +2,14 @@
 #include "pvpch.h"
 #include "Pavebo/Layer/Layer.h"
 namespace Pavebo {
-	class DebugOverlayLayer : public Layer
+	class PAVEBO_API DebugOverlayLayer : public Layer
 	{
 	public:
-		DebugOverlayLayer(){}
-		void OnAttach() override { PAVEBO_CORE_TRACE("Attached layer"); };
-		void OnDetach() override {};
-		void OnUpdate() {}
-		void OnEvent(Event& event) {}
+		DebugOverlayLayer();
+		~DebugOverlayLayer();
+		void OnAttach() override;
+		void OnDetach() override;
+		void OnUpdate() override;
+		void OnEvent(Event& event) override;
 	};
 }
