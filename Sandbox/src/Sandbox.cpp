@@ -19,7 +19,7 @@ class Sandbox : public Pavebo::Application
 public:
 	Sandbox()
 	{
-		PushLayer(new Pavebo::DebugOverlayLayer());
+		PushOverlay(new Pavebo::DebugOverlayLayer());
 	}
 	~Sandbox(){}
 	void Run() override

@@ -7,6 +7,9 @@
     <Filter Include="Pavebo\Event">
       <UniqueIdentifier>{33724143-1FD5-D0E7-C85A-099EB49C9C6A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pavebo\Layer">
+      <UniqueIdentifier>{AEEDB443-9A50-44E8-43D6-7C9E2F18106B}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
@@ -37,11 +40,14 @@
     <ClInclude Include="src\Pavebo\Event\MouseEvent.h">
       <Filter>Pavebo\Event</Filter>
     </ClInclude>
+    <ClInclude Include="src\Pavebo\Layer\DebugOverlayLayer.h">
+      <Filter>Pavebo\Layer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Pavebo\Layer\Layer.h">
-      <Filter>Pavebo</Filter>
+      <Filter>Pavebo\Layer</Filter>
     </ClInclude>
     <ClInclude Include="src\Pavebo\Layer\LayerStack.h">
-      <Filter>Pavebo</Filter>
+      <Filter>Pavebo\Layer</Filter>
     </ClInclude>
     <ClInclude Include="src\Pavebo\Log.h">
       <Filter>Pavebo</Filter>
@@ -53,17 +59,19 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\pvpch.h" />
-    <ClInclude Include="src\Pavebo\Layer\DebugOverlayLayer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pavebo\Application.cpp">
       <Filter>Pavebo</Filter>
     </ClCompile>
+    <ClCompile Include="src\Pavebo\Layer\DebugOverlayLayer.cpp">
+      <Filter>Pavebo\Layer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Pavebo\Layer\Layer.cpp">
-      <Filter>Pavebo</Filter>
+      <Filter>Pavebo\Layer</Filter>
     </ClCompile>
     <ClCompile Include="src\Pavebo\Layer\LayerStack.cpp">
-      <Filter>Pavebo</Filter>
+      <Filter>Pavebo\Layer</Filter>
     </ClCompile>
     <ClCompile Include="src\Pavebo\Log.cpp">
       <Filter>Pavebo</Filter>
@@ -72,6 +80,5 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\pvpch.cpp" />
-    <ClCompile Include="src\Pavebo\Layer\DebugOverlayLayer.cpp" />
   </ItemGroup>
 </Project>
