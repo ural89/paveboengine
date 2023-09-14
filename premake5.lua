@@ -12,8 +12,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "PaveboEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "PaveboEngine/vendor/Glad/include"
+IncludeDir["ImGUI"] = "PaveboEngine/vendor/imgui"
+
 include "PaveboEngine/vendor/GLFW"
 include "PaveboEngine/vendor/Glad"
+include "PaveboEngine/vendor/imgui"
 
 project "PaveboEngine"
 	location "PaveboEngine"
@@ -36,12 +39,14 @@ project "PaveboEngine"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGUI}"
 	}
 	links
 	{
 		"GLFW",
 		"Glad",
+		"ImGUI",
 		"opengl32.lib"
 	}
 	

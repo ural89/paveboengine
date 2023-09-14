@@ -3,7 +3,7 @@
 
 namespace Pavebo
 {
-	DebugOverlayLayer::DebugOverlayLayer()
+	DebugOverlayLayer::DebugOverlayLayer() : Layer("ImGUILayer")
 	{
 	}
 	DebugOverlayLayer::~DebugOverlayLayer()
@@ -12,6 +12,7 @@ namespace Pavebo
 	void DebugOverlayLayer::OnAttach()
 	{
 
+		PAVEBO_CORE_TRACE(GetName());
 	}
 	void DebugOverlayLayer::OnDetach()
 	{

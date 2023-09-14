@@ -16,6 +16,9 @@
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\Windows\OpenGL">
+      <UniqueIdentifier>{186CC35A-84A3-0BF2-8DAD-6F15F96332EB}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pavebo.h" />
@@ -55,6 +58,9 @@
     <ClInclude Include="src\Pavebo\Window.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\OpenGL\ImGUIOpenGLRenderer.h">
+      <Filter>Platform\Windows\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -75,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="src\Pavebo\Log.cpp">
       <Filter>Pavebo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\OpenGL\ImGUIOpenGLRenderer.cpp">
+      <Filter>Platform\Windows\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
