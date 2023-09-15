@@ -165,7 +165,7 @@
     <ClInclude Include="src\Pavebo\Layer\LayerStack.h" />
     <ClInclude Include="src\Pavebo\Log.h" />
     <ClInclude Include="src\Pavebo\Window.h" />
-    <ClInclude Include="src\Platform\Windows\OpenGL\ImGUIOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGUIOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\pvpch.h" />
   </ItemGroup>
@@ -175,7 +175,7 @@
     <ClCompile Include="src\Pavebo\Layer\Layer.cpp" />
     <ClCompile Include="src\Pavebo\Layer\LayerStack.cpp" />
     <ClCompile Include="src\Pavebo\Log.cpp" />
-    <ClCompile Include="src\Platform\Windows\OpenGL\ImGUIOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGUIOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pvpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

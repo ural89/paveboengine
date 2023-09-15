@@ -58,7 +58,7 @@
     <ClInclude Include="src\Pavebo\Window.h">
       <Filter>Pavebo</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\Windows\OpenGL\ImGUIOpenGLRenderer.h">
+    <ClInclude Include="src\Platform\OpenGL\ImGUIOpenGLRenderer.h">
       <Filter>Platform\Windows\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
@@ -82,7 +82,7 @@
     <ClCompile Include="src\Pavebo\Log.cpp">
       <Filter>Pavebo</Filter>
     </ClCompile>
-    <ClCompile Include="src\Platform\Windows\OpenGL\ImGUIOpenGLRenderer.cpp">
+    <ClCompile Include="src\Platform\OpenGL\ImGUIOpenGLRenderer.cpp">
       <Filter>Platform\Windows\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
