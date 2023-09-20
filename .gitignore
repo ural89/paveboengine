@@ -398,3 +398,9 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 *.db
+*.vcxproj
+CppProperties.json
+*.recipe
+*.idb
+*.idb
+*.sln
